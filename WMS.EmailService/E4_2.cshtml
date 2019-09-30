@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<style>
+ p{
+margin:0px !important;
+}
+</style>
+</head>
+<body style="margin: 0; padding: 0; font-family: calibri, sans-serif;padding:10px 20px;">
+    <header>
+        <div style="height: 70px; background: #fff !important;text-align: left;"> 
+        </div>
+    </header>
+			<br/>
+			<table style="border-spacing: 0px;">
+				<tr><td style="font-family: calibri, sans-serif;">Dear @Model.CustomerName,</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;">Below Design rejected by you on @Model.Date, have been resubmitted , please <a href="@Model.SiteLink"> check here</a> and accept it View it(take to accept or Reject page)</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;"><b>PO Number:</b> @Model.PONumber</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;"><b>Order Number:</b> @Model.OrderNumber</td></tr>				
+				<tr><td style="font-family: calibri, sans-serif;"><b>S/O Number:</b> @Model.DesignNumber</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;"><b>Design Name:</b> @Model.DesignName</td></tr>				
+				<tr><td style="font-family: calibri, sans-serif;"><b>Style No:</b> @Model.StyleNumber</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;"><b>Color:</b> @Model.Color</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;"><b>Quantity:</b> @Model.Quantity</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+			</table>
+			<br/>
+			<table style="border-spacing: 0px;">
+						<tr><td style="font-family: calibri, sans-serif;">For technical support, kindly email us at <a href="mailto:support@lionstarchina.com">support@lionstarchina.com</a></td></tr>
+		<tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+
+				<tr><td style="font-family: calibri, sans-serif;">Kind Regards,</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+				<tr><td style="font-family: calibri, sans-serif;"><b>Lionstar Manufacturing Limited</b></td></tr>
+			 </table>
+</body>
+</html>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14B4E827-5286-47F3-A26D-ABE059E61C79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS.Reports</RootNamespace>
+    <AssemblyName>WMS.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Data.v18.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarCodeReport.cs" />
+    <Compile Include="ReportDataSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\BarcodeNo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BarcodeNo.Designer.cs">
+      <DependentUpon>BarcodeNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CartonNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CartonNumber.Designer.cs">
+      <DependentUpon>CartonNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AllSkuReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AllSkuReport.Designer.cs">
+      <DependentUpon>AllSkuReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DailyDispatchReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DailyDispatchReport.Designer.cs">
+      <DependentUpon>DailyDispatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\JobSheetShippingDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\JobSheetShippingDetail.Designer.cs">
+      <DependentUpon>JobSheetShippingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\OrderPendingDispatchReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\OrderPendingDispatchReport.Designer.cs">
+      <DependentUpon>OrderPendingDispatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PendingPickRequestDispatchReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PendingPickRequestDispatchReport.Designer.cs">
+      <DependentUpon>PendingPickRequestDispatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProductSkuReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ProductSkuReport.Designer.cs">
+      <DependentUpon>ProductSkuReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\OrdersReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\OrdersReport.Designer.cs">
+      <DependentUpon>OrdersReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DynaStySportProductStockReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DynaStySportProductStockReport.Designer.cs">
+      <DependentUpon>DynaStySportProductStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DynaStySportOrdersReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DynaStySportOrdersReport.Designer.cs">
+      <DependentUpon>DynaStySportOrdersReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DynaStySportAllStockReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DynaStySportAllStockReport.Designer.cs">
+      <DependentUpon>DynaStySportAllStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DesignJobSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DesignJobSheet.Designer.cs">
+      <DependentUpon>DesignJobSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DesignSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DesignSheet.Designer.cs">
+      <DependentUpon>DesignSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CustomerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport.Designer.cs">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReceivingNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReceivingNote.Designer.cs">
+      <DependentUpon>ReceivingNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PickRequestReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PickRequestReport.Designer.cs">
+      <DependentUpon>PickRequestReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TotalDailyDispatchReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TotalDailyDispatchReport.Designer.cs">
+      <DependentUpon>TotalDailyDispatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\WarehouseDispatch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\WarehouseDispatch.Designer.cs">
+      <DependentUpon>WarehouseDispatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Report\BarcodeNo.resx">
+      <DependentUpon>BarcodeNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CartonNumber.resx">
+      <DependentUpon>CartonNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AllSkuReport.resx">
+      <DependentUpon>AllSkuReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DailyDispatchReport.resx">
+      <DependentUpon>DailyDispatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\JobSheetShippingDetail.resx">
+      <DependentUpon>JobSheetShippingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\OrderPendingDispatchReport.resx">
+      <DependentUpon>OrderPendingDispatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PendingPickRequestDispatchReport.resx">
+      <DependentUpon>PendingPickRequestDispatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ProductSkuReport.resx">
+      <DependentUpon>ProductSkuReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\OrdersReport.resx">
+      <DependentUpon>OrdersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DynaStySportProductStockReport.resx">
+      <DependentUpon>DynaStySportProductStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DynaStySportOrdersReport.resx">
+      <DependentUpon>DynaStySportOrdersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DynaStySportAllStockReport.resx">
+      <DependentUpon>DynaStySportAllStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DesignJobSheet.resx">
+      <DependentUpon>DesignJobSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DesignSheet.resx">
+      <DependentUpon>DesignSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport.resx">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReceivingNote.resx">
+      <DependentUpon>ReceivingNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PickRequestReport.resx">
+      <DependentUpon>PickRequestReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TotalDailyDispatchReport.resx">
+      <DependentUpon>TotalDailyDispatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WarehouseDispatch.resx">
+      <DependentUpon>WarehouseDispatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WMS.Model\WMS.Model.csproj">
+      <Project>{D9B428A8-9921-4E15-AFBD-C70EAF7B090E}</Project>
+      <Name>WMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WMS.Service\WMS.Service.csproj">
+      <Project>{62157cda-36f4-4db9-9363-6a873feae68c}</Project>
+      <Name>WMS.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

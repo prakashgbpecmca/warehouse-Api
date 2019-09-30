@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23d1a95aae0641da9db9dda4e2990885" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="WMSModel.ModuleScreenDetail" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="WMSModel.UserModuleScreen" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="WMSModel.C__MigrationHistory" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="WMSModel.sysdiagram" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.UserConfiguration" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="WMSModel.UserReceivingNote" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="WMSModel.UserReceivingNoteDetail" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.UserStock" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="WMSModel.UserStockLog" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSRole" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSUser" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSUserAdditional" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSUserAddress" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSUserClaim" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSUserLogin" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="WMSModel.WMSUserRole" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.CommunicationLog" Width="1.5" PointX="12.75" PointY="10.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderAddress" Width="1.5" PointX="3.75" PointY="13.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderCarton" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="WMSModel.OrderCartonDetail" Width="1.5" PointX="3" PointY="3" />
+        <EntityTypeShape EntityType="WMSModel.OrderDesign" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderDesignDetail" Width="1.5" PointX="14.75" PointY="6.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderDesignStyle" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderEmblishment" Width="1.5" PointX="12.75" PointY="14.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderEmblishmentDetail" Width="1.5" PointX="14.75" PointY="13.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderPickupDetail" Width="1.5" PointX="6" PointY="2.625" />
+        <EntityTypeShape EntityType="WMSModel.OrderStrikeOffLogo" Width="1.5" PointX="8.75" PointY="15.75" />
+        <EntityTypeShape EntityType="WMSModel.Color" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.Country" Width="1.5" PointX="16.75" PointY="3.75" />
+        <EntityTypeShape EntityType="WMSModel.DelivieryMethod" Width="1.5" PointX="5.75" PointY="16.75" />
+        <EntityTypeShape EntityType="WMSModel.ModuleScreen" Width="1.5" PointX="16.75" PointY="7.75" />
+        <EntityTypeShape EntityType="WMSModel.OrderStatu" Width="1.5" PointX="16.75" PointY="10.75" />
+        <EntityTypeShape EntityType="WMSModel.Size" Width="1.5" PointX="16.75" PointY="13.75" />
+        <EntityTypeShape EntityType="WMSModel.Timezone" Width="1.5" PointX="14.75" PointY="16.75" />
+        <EntityTypeShape EntityType="WMSModel.ProductCatagory" Width="1.5" PointX="16.75" PointY="16.75" />
+        <EntityTypeShape EntityType="WMSModel.ProductMaster" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="WMSModel.ProductSKU" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WMSModel.ProductStyle" Width="1.5" PointX="7.75" PointY="18.75" />
+        <EntityTypeShape EntityType="WMSModel.LineMaster" Width="1.5" PointX="18.75" PointY="9.75" />
+        <EntityTypeShape EntityType="WMSModel.RowMaster" Width="1.5" PointX="9.75" PointY="18.75" />
+        <EntityTypeShape EntityType="WMSModel.SectionDetail" Width="1.5" PointX="3.75" PointY="22" />
+        <EntityTypeShape EntityType="WMSModel.SectionMaster" Width="1.5" PointX="11.75" PointY="18.75" />
+        <EntityTypeShape EntityType="WMSModel.ShelfMaster" Width="1.5" PointX="18.75" PointY="12.75" />
+        <EntityTypeShape EntityType="WMSModel.ShelfRowDetail" Width="1.5" PointX="1.5" PointY="22" />
+        <EntityTypeShape EntityType="WMSModel.Warehouse" Width="1.5" PointX="18.75" PointY="15.75" />
+        <EntityTypeShape EntityType="WMSModel.WarehouseAllocationDetail" Width="1.5" PointX="13.75" PointY="19.75" />
+        <AssociationConnector Association="WMSModel.FK_OrderCartonDetail_OrderCarton" />
+        <AssociationConnector Association="WMSModel.FK_OrderCartonDetail_ProductSKU" />
+        <AssociationConnector Association="WMSModel.FK_OrderPickupDetail_ProductSKU" />
+        <AssociationConnector Association="WMSModel.FK_OrderPickupDetail_SectionDetail" />
+        <AssociationConnector Association="WMSModel.FK_SectionDetail_ShelfRowDetail" />
+        <EntityTypeShape EntityType="WMSModel.Order" Width="1.5" PointX="0.5" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="WMSModel.FK_OrderCarton_Order" />
+        <AssociationConnector Association="WMSModel.FK_OrderPickupDetail_Order" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

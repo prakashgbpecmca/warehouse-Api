@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        p {
+            margin: 0px !important;
+        }
+
+        table {
+            border-color: #ddd;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; font-family: calibri, sans-serif;padding:10px 20px;">
+    <header>
+        <div style="height: 70px; background: #fff !important;text-align: left;">
+        </div>
+    </header>
+    <br />
+    <table style="border-spacing: 0px;">
+        <tr><td style="font-family: calibri, sans-serif;">Dear @Model.MerchandiserName,</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">There is a new order came in for production, please see the job sheet attached. Either accept it or reject it for further processing.</td></tr>
+        <tr>
+            <td>
+                <table style="border-spacing: 0px;" width="100%">
+                    <tr><td colspan="2" style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+                    <tr>
+                        <td style="font-family: calibri, sans-serif;margin: 0px 10%;padding: 0 10%;width: 50%;">
+                            <a href="@Model.AcceptLink" style="line-height:34px;height:34px;width: 100%;outline: 0px;border-width: 0px;cursor:pointer;">Accept</a>
+                        </td>
+                        <td style="font-family: calibri, sans-serif;margin: 0px 10%;padding: 0 10%;width: 50%;">
+                            <a href="@Model.RejectLink" style="line-height:34px;height:34px;width: 100%;outline: 0px;border-width: 0px;cursor:pointer;">Reject</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><a href="#"><b>Order Summary:</b></a></td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+		<tr><td style="font-family: calibri, sans-serif;"><b>PO Number:</b> @Model.PONumber</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Order Number:</b> @Model.OrderNumber</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Design / Collection Name:</b> @Model.OrderName</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Selected Delivery Type:</b> @Model.DeliveryType</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Total Quantity:</b> @Model.TotalQuantity Pcs</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+    </table>
+    <table style="border-spacing: 0px;">
+        <tr><td style="font-family: calibri, sans-serif;"><b>Order Delivery Address: </b></td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">@Model.DeliveryAddress.FirstName @Model.DeliveryAddress.LastName</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">@Model.DeliveryAddress.CompanyName </td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">@Model.DeliveryAddress.Address,  @Model.DeliveryAddress.Address2</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">@Model.DeliveryAddress.State, @Model.DeliveryAddress.Country.Name</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Email:</b> <a href="mailto:@Model.DeliveryAddress.Email">@Model.DeliveryAddress.Email</a></td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Phone:</b> @Model.DeliveryAddress.Phone</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b><a href="">Order Detail</a></b></td></tr>
+        <!-- <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr> -->
+    </table>
+    <table style="border-spacing: 0px;" border="1" width="100%">
+        <tr>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>S.NO.</b></td>
+			<td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>S/O Number</b></td>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>Product Name</b></td>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>Product Code</b></td>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>SKU#</b></td>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>Pattern</b></td>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>Size</b></td>
+            <td style="font-family: calibri, sans-serif;background:#c0c0c0;"><b>Quantity (pcs)</b></td>
+        </tr>
+        @foreach (var PD in Model.ProductDetail)
+        {
+            <tr>
+                <td style="font-family: calibri, sans-serif;background:#c0c0c0;">@PD.SerialNo</td>
+				<td style="font-family: calibri, sans-serif;">@PD.DesignNumber</td>
+                <td style="font-family: calibri, sans-serif;">@PD.ProductName</td>
+                <td style="font-family: calibri, sans-serif;">@PD.ProductCode</td>
+                <td style="font-family: calibri, sans-serif;">@PD.SKU</td>
+                <td style="font-family: calibri, sans-serif;">@PD.Color</td>
+                <td style="font-family: calibri, sans-serif;">@PD.Size</td>
+                <td style="font-family: calibri, sans-serif;">@PD.Quantity</td>
+            </tr>
+        }
+        <tr>
+            <td style="font-family: calibri, sans-serif;" colspan="7" align="right"><b>Total: &nbsp; &nbsp;</b></td>
+            <td style="font-family: calibri, sans-serif;"><b>@Model.TotalQuantity  (pcs)</b></td>
+        </tr>
+    </table>
+    <br />
+    <table style="border-spacing: 0px;">
+			<tr><td style="font-family: calibri, sans-serif;">For technical support, kindly email us at <a href="mailto:support@lionstarchina.com">support@lionstarchina.com</a></td></tr>
+		<tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+
+        <tr><td style="font-family: calibri, sans-serif;">Kind Regards,</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;">&nbsp;</td></tr>
+        <tr><td style="font-family: calibri, sans-serif;"><b>Lionstar Manufacturing Limited</b></td></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62157CDA-36F4-4DB9-9363-6A873FEAE68C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS.Service</RootNamespace>
+    <AssemblyName>WMS.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.13605.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.1.2.1389, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\Color.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CommunicationLog.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Country.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\C__MigrationHistory.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DelivieryMethod.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LineMaster.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ModuleScreen.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ModuleScreenDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Order.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderAddress.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderCarton.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderCartonDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderDesign.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderDesignDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderDesignStyle.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderEmblishment.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderEmblishmentDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderPickupDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderStatu.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\OrderStrikeOffLogo.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ProductCatagory.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ProductMaster.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ProductSKU.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ProductStyle.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\RowMaster.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SectionDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SectionMaster.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ShelfMaster.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ShelfRowDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Size.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\spGetOrderList_Result.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\spGetStockHeader_Result.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sysdiagram.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Timezone.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserConfiguration.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserModuleScreen.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserReceivingNote.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserReceivingNoteDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserStock.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserStockLog.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Warehouse.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WarehouseAllocationDetail.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSRole.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSUser.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSUserAdditional.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSUserAddress.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSUserClaim.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSUserLogin.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\WMSUserRole.cs">
+      <DependentUpon>WMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenericRepository\AllRepository.cs" />
+    <Compile Include="GenericRepository\IAllRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AccessControlRespository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
+    <Compile Include="Repository\DYORepository.cs" />
+    <Compile Include="Repository\EmailRepository.cs" />
+    <Compile Include="Repository\MasterRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\RackRespository.cs" />
+    <Compile Include="Repository\ReportRepository.cs" />
+    <Compile Include="Repository\SettingRepository.cs" />
+    <Compile Include="Repository\ShelfRespository.cs" />
+    <Compile Include="Repository\StockRespository.cs" />
+    <Compile Include="Repository\UtilityRepository.cs" />
+    <Compile Include="Repository\WMSUserRepository.cs" />
+    <Compile Include="Utility\AppSetting.cs" />
+    <Compile Include="Utility\CommonConversion.cs" />
+    <Compile Include="Utility\FrayteEmail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataAccess\WMSDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WMSDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataAccess\WMSDB.edmx.diagram">
+      <DependentUpon>WMSDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WMS.Model\WMS.Model.csproj">
+      <Project>{d9b428a8-9921-4e15-afbd-c70eaf7b090e}</Project>
+      <Name>WMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess\WMSDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WMSDB.edmx</DependentUpon>
+      <LastGenOutput>WMSDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccess\WMSDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WMSDB.edmx</DependentUpon>
+      <LastGenOutput>WMSDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
